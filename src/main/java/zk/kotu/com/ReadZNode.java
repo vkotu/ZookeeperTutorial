@@ -15,9 +15,12 @@ public class ReadZNode {
     }
 
     public static void main(String[] args) throws Exception {
-        String path = "/yamplus";
+        String path = "/getmyacl";
         zkc = new ZkConnector();
         zk = zkc.connect("localhost");
+        String user = "vicky";
+        String pwd = "password";
+        zk.addAuthInfo("digest", (user + ":" + pwd).getBytes());
 
         byte[] data = read(path, zk);
         for (byte b : data) {

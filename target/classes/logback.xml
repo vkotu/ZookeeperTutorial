@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true">
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d %-4relative %-5level %logger{36} %X{ID_START}%X{UUID}%X{SESSION_ID}%X{ID_END} - %msg%n%ex</Pattern>
+        </layout>
+    </appender>
+
+    <!-- commonly used loggers -->
+    <logger name="com.yahoo.yamplus" level="info" />
+    <logger name="com.yahoo.yamplus.zk.client.ZNodeService" level="debug" />
+    <logger name="org.springframework.core" level="warn" />
+    <logger name="org.springframework.beans" level="warn" />
+    <logger name="org.springframework.context" level="warn" />
+    <logger name="org.springframework.jdbc" level="warn" />
+    <logger name="org.springframework.security" level="warn" />
+    <logger name="org.springframework.integration" level="warn" />
+    <logger name="org.springframework" level="warn" />
+    <logger name="org.springframework.boot" level="info" />
+    <logger name="org.eclipse.jetty.server" level="info" />
+    <logger name="ch.qos.logback.classic.joran" level="warn" />
+    <logger name="com.glassfish.jersey" level="warn" />
+    <logger name="org.apache.commons" level="warn" />
+    <logger name="com.yahoo.bouncer" level="error" />
+    <logger name="yjava" level="error" />
+    <logger name="javax.management" level="error" />
+    <logger name="httpclient.wire" level="warn" />
+    <logger name="org" level="error" />
+
+    <root level="all">
+        <appender-ref ref="CONSOLE" />
+    </root>
+</configuration> 

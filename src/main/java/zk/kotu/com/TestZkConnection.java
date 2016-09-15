@@ -19,8 +19,8 @@ public class TestZkConnection {
 
     public static void main(String[] args) throws IOException, InterruptedException, KeeperException {
         zkc = new ZkConnector();
-        zk = zkc.connect("localhost");
-        znodeList = zk.getChildren("/", true);
+        zk = zkc.connect("driftshift.corp.ne1.yahoo.com");
+        znodeList = zk.getChildren("/yamplus", true);
         for (String znode : znodeList ) {
             System.out.println(znode);
         }
